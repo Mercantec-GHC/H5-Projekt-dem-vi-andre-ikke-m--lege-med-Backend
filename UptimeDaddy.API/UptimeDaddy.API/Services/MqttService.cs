@@ -9,19 +9,24 @@ namespace UptimeDaddy.API.Services
     public class MqttService
     {
         private readonly AppDbContext _context;
+        private readonly IConfiguration _configuration;
 
-        public MqttService(AppDbContext context)
+        public MqttService(AppDbContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         public async Task StartAsync()
         {
+            var host = _configuration["Mqtt:Host"];
+            var port = int.Parse(_configuration["Mqtt:Port"] ?? "1883");
+
             var factory = new MqttClientFactory();
             var client = factory.CreateMqttClient();
 
             var options = new MqttClientOptionsBuilder()
-                .WithTcpServer("10.133.51.122", 1883)
+                .WithTcpServer(host, port)
                 .Build();
 
             client.ApplicationMessageReceivedAsync += async e =>

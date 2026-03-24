@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using UptimeDaddy.API.Data;
 using UptimeDaddy.API.DTOs;
 using UptimeDaddy.API.Models;
+using UptimeDaddy.API.Services;
 
 namespace UptimeDaddy.API.Controllers
 {
@@ -11,10 +12,12 @@ namespace UptimeDaddy.API.Controllers
     public class WebsitesController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly MqttPublishService _mqttPublishService;
 
-        public WebsitesController(AppDbContext context)
+        public WebsitesController(AppDbContext context, MqttPublishService mqttPublishService)
         {
             _context = context;
+            _mqttPublishService = mqttPublishService;
         }
 
         [HttpGet]
@@ -22,6 +25,19 @@ namespace UptimeDaddy.API.Controllers
         {
             var websites = await _context.Websites.ToListAsync();
             return Ok(websites);
+        }
+
+        [HttpGet("{id:long}")]
+        public async Task<IActionResult> GetById(long id)
+        {
+            var website = await _context.Websites.FirstOrDefaultAsync(w => w.Id == id);
+
+            if (website == null)
+            {
+                return NotFound("Website blev ikke fundet.");
+            }
+
+            return Ok(website);
         }
 
         [HttpPost]
@@ -44,7 +60,35 @@ namespace UptimeDaddy.API.Controllers
             _context.Websites.Add(website);
             await _context.SaveChangesAsync();
 
+            await _mqttPublishService.PublishWebsiteCreatedAsync(
+                website.UserId,
+                website.Id,
+                website.Url,
+                website.IntervalTime
+            );
+
             return Ok(website);
+        }
+
+        [HttpDelete("{id:long}")]
+        public async Task<IActionResult> Delete(long id)
+        {
+            var website = await _context.Websites.FirstOrDefaultAsync(w => w.Id == id);
+
+            if (website == null)
+            {
+                return NotFound("Website blev ikke fundet.");
+            }
+
+            var userId = website.UserId;
+            var websiteId = website.Id;
+
+            _context.Websites.Remove(website);
+            await _context.SaveChangesAsync();
+
+            await _mqttPublishService.PublishWebsiteDeletedAsync(userId, websiteId);
+
+            return NoContent();
         }
     }
 }

@@ -91,8 +91,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Models\\Website.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:10:22.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:10:22.803Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Models\\Measurement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:31:18.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:31:18.253Z"
             },
             {
               "$type": "Document",
@@ -117,8 +115,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Controllers\\WebsitesController.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAqwB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:31:14.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:31:14.504Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Services\\MqttService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:15:47.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:15:47.712Z"
             },
             {
               "$type": "Document",
@@ -143,8 +139,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T11:56:51.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T11:56:51.974Z"
             },
             {
               "$type": "Document",
@@ -156,8 +151,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:23:14.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:23:14.383Z"
             },
             {
               "$type": "Document",
@@ -169,8 +163,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\DTOs\\CreateWebsiteDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:53:25.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:53:25.255Z"
             },
             {
               "$type": "Document",
@@ -182,8 +175,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Controllers\\UsersController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:38:37.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:38:37.034Z"
             },
             {
               "$type": "Document",
@@ -195,8 +187,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-23T12:05:13.001Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:05:13.001Z"
             },
             {
               "$type": "Document",
@@ -208,8 +199,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Services\\WebsiteService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T13:32:24.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T13:32:24.321Z"
             },
             {
               "$type": "Document",
@@ -221,8 +211,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\Controllers\\MeasurementController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:31:12.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:31:12.464Z"
             },
             {
               "$type": "Document",
@@ -234,8 +223,7 @@
               "RelativeToolTip": "UptimeDaddy.API\\DTOs\\CreateMeasurementDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:11:27.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T12:11:27.725Z"
             }
           ]
         }

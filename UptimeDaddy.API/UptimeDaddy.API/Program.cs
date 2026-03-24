@@ -25,16 +25,17 @@ builder.Services.AddCors(options =>
     });
 });
 
-//builder.Services.AddScoped<MqttService>();
+builder.Services.AddScoped<MqttPublishService>();
+builder.Services.AddScoped<MqttService>();
 
 
 var app = builder.Build();
 
-/*using (var scope = app.Services.CreateScope())
+using (var scope = app.Services.CreateScope())
 {
     var mqtt = scope.ServiceProvider.GetRequiredService<MqttService>();
     await mqtt.StartAsync();
-}*/
+}
 
 app.UseCors();
 
