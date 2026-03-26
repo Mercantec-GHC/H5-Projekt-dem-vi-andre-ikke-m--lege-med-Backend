@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UptimeDaddy.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+655d7afc957bb88922f4c1a72de369d677397181")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9122150eacd1501838b43aff30e37d2999bd598")]
 [assembly: System.Reflection.AssemblyProductAttribute("UptimeDaddy.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UptimeDaddy.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
