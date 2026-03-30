@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
                 "http://localhost:5173",
-                "10.133.51.121:5173"
+                "http://10.133.51.121:5173"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
@@ -35,6 +35,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
 
