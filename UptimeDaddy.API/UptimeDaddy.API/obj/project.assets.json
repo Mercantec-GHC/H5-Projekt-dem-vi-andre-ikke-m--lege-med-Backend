@@ -2998,11 +2998,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kevin\\source\\repos\\h5-projekt-vi-er-dem-de-andre-ikke-ma-lege-med\\UptimeDaddy.API\\UptimeDaddy.API\\UptimeDaddy.API.csproj",
+      "projectUniqueName": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\UptimeDaddy.API.csproj",
       "projectName": "UptimeDaddy.API",
-      "projectPath": "C:\\Users\\kevin\\source\\repos\\h5-projekt-vi-er-dem-de-andre-ikke-ma-lege-med\\UptimeDaddy.API\\UptimeDaddy.API\\UptimeDaddy.API.csproj",
+      "projectPath": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\UptimeDaddy.API.csproj",
       "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kevin\\source\\repos\\h5-projekt-vi-er-dem-de-andre-ikke-ma-lege-med\\UptimeDaddy.API\\UptimeDaddy.API\\obj\\",
+      "outputPath": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Shared\\NuGetPackages"

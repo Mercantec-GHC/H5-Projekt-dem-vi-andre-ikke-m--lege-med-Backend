@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+wmP45H1ziA=",
+  "dgSpecHash": "jcE06eP3/kw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kevin\\source\\repos\\h5-projekt-vi-er-dem-de-andre-ikke-ma-lege-med\\UptimeDaddy.API\\UptimeDaddy.API\\UptimeDaddy.API.csproj",
+  "projectFilePath": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\UptimeDaddy.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kevin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kevin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.5\\microsoft.aspnetcore.authentication.jwtbearer.10.0.5.nupkg.sha512",
