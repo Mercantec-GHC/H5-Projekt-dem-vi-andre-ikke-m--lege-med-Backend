@@ -141,9 +141,19 @@ namespace UptimeDaddy.API.Controllers
                 return BadRequest("Account findes ikke.");
             }
 
+            var normalizedUrl = dto.Url.Trim().ToLower();
+
+            var websiteAlreadyExists = await _context.Websites
+                .AnyAsync(w => w.UserId == dto.UserId && w.Url.ToLower() == normalizedUrl);
+
+            if (websiteAlreadyExists)
+            {
+                return BadRequest("Du har allerede tilføjet dette website.");
+            }
+
             var website = new Website
             {
-                Url = dto.Url,
+                Url = dto.Url.Trim(),
                 IntervalTime = dto.IntervalTime,
                 UserId = dto.UserId
             };

@@ -19,6 +19,14 @@ namespace UptimeDaddy.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Models.Measurement measurement)
         {
+            var exists = await _context.Websites
+                .AnyAsync(w => w.Id == measurement.WebsiteId);
+
+            if (!exists)
+            {
+                return BadRequest("Website findes ikke (måske slettet)");
+            }
+
             _context.Measurements.Add(measurement);
             await _context.SaveChangesAsync();
 
