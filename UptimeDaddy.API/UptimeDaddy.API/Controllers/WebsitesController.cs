@@ -131,6 +131,38 @@ namespace UptimeDaddy.API.Controllers
             return Ok(latestMeasurement);
         }
 
+        [HttpGet("{id:long}/ping")]
+        public async Task<IActionResult> GetPing(long id)
+        {
+            var websiteExists = await _context.Websites.AnyAsync(w => w.Id == id);
+
+            if (!websiteExists)
+            {
+                return NotFound("Website blev ikke fundet");     
+            }
+
+            var latestMeasurement = await _context.Measurements
+                .Where(m => m.WebsiteId == id)
+                .OrderByDescending(m => m.CreatedAt)
+                .Select(m => new
+                {
+                    statusCode = m.StatusCode,
+                    dnsLookupMs = m.DnsLookupMs,
+                    connectMs = m.ConnectMs,
+                    tlsHandshakeMs = m.TlsHandshakeMs,
+                    timeToFirstByteMs = m.TimeToFirstByteMs,
+                    totalTimeMs = m.TotalTimeMs
+                })
+                .FirstOrDefaultAsync();
+
+            if (latestMeasurement == null)
+            {
+                return NotFound("Ingen målinger på denne website");
+            }
+
+            return Ok(latestMeasurement);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateWebsiteDto dto)
         {
