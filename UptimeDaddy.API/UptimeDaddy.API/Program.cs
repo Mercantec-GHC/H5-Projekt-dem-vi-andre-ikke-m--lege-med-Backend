@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<MqttService>();
+builder.Services.AddHostedService<MqttService>();
 builder.Services.AddScoped<MqttPublishService>();
 
 builder.Services.AddCors(options =>

@@ -11,8 +11,6 @@ namespace UptimeDaddy.API.Models
         [Column("website_id")]
         public long WebsiteId { get; set; }
 
-        public Website Website { get; set; } = null!;
-
         [Column("status_code")]
         public int StatusCode { get; set; }
 
