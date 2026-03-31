@@ -10,6 +10,7 @@ namespace UptimeDaddy.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class WebsitesController : ControllerBase
     {
         private readonly AppDbContext _context;
