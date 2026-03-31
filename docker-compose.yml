@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: uptimedaddy-api
+    container_name: uptimedaddy-apilocal
     ports:
       - "8080:8080"
     env_file:
