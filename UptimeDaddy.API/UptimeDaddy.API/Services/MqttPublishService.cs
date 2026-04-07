@@ -130,7 +130,7 @@ namespace UptimeDaddy.API.Services
             {
                 type = "ping_preview",
                 requestId = requestId,
-                url = url,
+                path = url,
                 timestamp = DateTime.UtcNow
             };
 
