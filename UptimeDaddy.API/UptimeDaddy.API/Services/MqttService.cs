@@ -103,6 +103,34 @@ namespace UptimeDaddy.API.Services
                             Console.WriteLine($"No pending preview request found for RequestId: {response.RequestId}");
                         }
                     }
+                    else if (topic == "uptime/update_favicon")
+                    {
+                        var faviconMessage = JsonSerializer.Deserialize<MqttFaviconUpdateDto>(payload);
+
+                        if (faviconMessage == null || faviconMessage.WebsiteId <= 0 || string.IsNullOrWhiteSpace(faviconMessage.Icon))
+                        {
+                            Console.WriteLine("Invalid favicon payload.");
+                            return;
+                        }
+
+                        using var scope = _scopeFactory.CreateScope();
+                        var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+                        var website = await context.Websites
+                            .FirstOrDefaultAsync(w => w.Id == faviconMessage.WebsiteId, stoppingToken);
+
+                        if (website == null)
+                        {
+                            Console.WriteLine($"Website {faviconMessage.WebsiteId} not found for favicon update.");
+                            return;
+                        }
+
+                        website.FaviconBase64 = faviconMessage.Icon;
+
+                        await context.SaveChangesAsync(stoppingToken);
+
+                        Console.WriteLine($"Favicon updated for website {faviconMessage.WebsiteId}");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -119,8 +147,9 @@ namespace UptimeDaddy.API.Services
                 await _client.ConnectAsync(options, stoppingToken);
                 await _client.SubscribeAsync("uptime/measurements", cancellationToken: stoppingToken);
                 await _client.SubscribeAsync("uptime/ping/responses", cancellationToken: stoppingToken);
+                await _client.SubscribeAsync("uptime/update_favicon", cancellationToken: stoppingToken);
 
-                Console.WriteLine("MQTT connected and subscribed to uptime/measurements and uptime/ping/responses");
+                Console.WriteLine("MQTT connected and subscribed to uptime/measurements, uptime/ping/responses and uptime/update_favicon");
             }
             catch (Exception ex)
             {

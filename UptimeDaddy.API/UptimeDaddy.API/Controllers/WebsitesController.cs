@@ -31,7 +31,8 @@ namespace UptimeDaddy.API.Controllers
                     id = w.Id,
                     url = w.Url,
                     intervalTime = w.IntervalTime,
-                    userId = w.UserId
+                    userId = w.UserId,
+                    faviconBase64 = w.FaviconBase64
                 })
                 .ToListAsync();
 
@@ -48,7 +49,8 @@ namespace UptimeDaddy.API.Controllers
                     id = w.Id,
                     url = w.Url,
                     intervalTime = w.IntervalTime,
-                    userId = w.UserId
+                    userId = w.UserId,
+                    faviconBase64 = w.FaviconBase64
                 })
                 .ToListAsync();
 
@@ -67,6 +69,7 @@ namespace UptimeDaddy.API.Controllers
                     url = w.Url,
                     intervalTime = w.IntervalTime,
                     userId = w.UserId,
+                    faviconBase64 = w.FaviconBase64,
                     measurements = w.Measurements
                         .OrderByDescending(m => m.CreatedAt)
                         .Select(m => new
@@ -97,7 +100,8 @@ namespace UptimeDaddy.API.Controllers
                     id = w.Id,
                     url = w.Url,
                     intervalTime = w.IntervalTime,
-                    userId = w.UserId
+                    userId = w.UserId,
+                    faviconBase64 = w.FaviconBase64
                 })
                 .FirstOrDefaultAsync(w => w.id == id);
 
@@ -218,7 +222,8 @@ namespace UptimeDaddy.API.Controllers
                 id = website.Id,
                 url = website.Url,
                 intervalTime = website.IntervalTime,
-                userId = website.UserId
+                userId = website.UserId,
+                faviconBase64 = website.FaviconBase64
             });
         }
 
@@ -241,6 +246,42 @@ namespace UptimeDaddy.API.Controllers
             await _mqttPublishService.PublishWebsiteDeletedAsync(userId, websiteId);
 
             return NoContent();
+        }
+
+        [HttpPut("{id:long}/interval")]
+        public async Task<IActionResult> UpdateInterval(long id, [FromBody] UpdateWebsiteIntervalDto dto)
+        {
+            if (dto.IntervalTime <= 0)
+            {
+                return BadRequest("IntervalTime skal være større end 0.");
+            }
+
+            var website = await _context.Websites.FirstOrDefaultAsync(w => w.Id == id);
+
+            if (website == null)
+            {
+                return NotFound("Website blev ikke fundet.");
+            }
+
+            website.IntervalTime = dto.IntervalTime;
+
+            await _context.SaveChangesAsync();
+
+            await _mqttPublishService.PublishWebsiteUpdatedAsync(
+                website.UserId,
+                website.Id,
+                website.Url,
+                website.IntervalTime
+            );
+
+            return Ok(new
+            {
+                id = website.Id,
+                url = website.Url,
+                intervalTime = website.IntervalTime,
+                userId = website.UserId,
+                faviconBase64 = website.FaviconBase64
+            });
         }
     }
 }
