@@ -108,5 +108,52 @@ namespace UptimeDaddy.API.Services
                 Console.WriteLine($"MQTT publish failed (website_deleted): {ex.Message}");
             }
         }
+        public async Task PublishPingPreviewAsync(string requestId, string url)
+        {
+            var host = _configuration["Mqtt:Host"];
+            var port = int.Parse(_configuration["Mqtt:Port"] ?? "1883");
+
+            if (string.IsNullOrWhiteSpace(host))
+            {
+                Console.WriteLine("MQTT host is not configured.");
+                return;
+            }
+
+            var factory = new MqttClientFactory();
+            var client = factory.CreateMqttClient();
+
+            var options = new MqttClientOptionsBuilder()
+                .WithTcpServer(host, port)
+                .Build();
+
+            var payloadObject = new
+            {
+                type = "ping_preview",
+                requestId = requestId,
+                url = url,
+                timestamp = DateTime.UtcNow
+            };
+
+            var payload = JsonSerializer.Serialize(payloadObject);
+
+            var message = new MqttApplicationMessageBuilder()
+                .WithTopic("uptime/ping/requests")
+                .WithPayload(Encoding.UTF8.GetBytes(payload))
+                .Build();
+
+            try
+            {
+                await client.ConnectAsync(options);
+                await client.PublishAsync(message);
+                await client.DisconnectAsync();
+
+                Console.WriteLine("MQTT publish: ping_preview");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"MQTT publish failed (ping_preview): {ex.Message}");
+                throw;
+            }
+        }
     }
 }

@@ -132,36 +132,48 @@ namespace UptimeDaddy.API.Controllers
             return Ok(latestMeasurement);
         }
 
-        [HttpGet("{id:long}/ping")]
-        public async Task<IActionResult> GetPing(long id)
+        [HttpPost("ping")]
+        public async Task<IActionResult> PreviewPing(
+            [FromBody] PingPreviewRequestDto request,
+            [FromServices] PingPreviewService pingPreviewService,
+            CancellationToken cancellationToken)
         {
-            var websiteExists = await _context.Websites.AnyAsync(w => w.Id == id);
-
-            if (!websiteExists)
+            if (string.IsNullOrWhiteSpace(request.Url))
             {
-                return NotFound("Website blev ikke fundet");     
+                return BadRequest("URL er påkrævet.");
             }
 
-            var latestMeasurement = await _context.Measurements
-                .Where(m => m.WebsiteId == id)
-                .OrderByDescending(m => m.CreatedAt)
-                .Select(m => new
+            var url = request.Url.Trim();
+
+            if (!url.StartsWith("http://") && !url.StartsWith("https://"))
+            {
+                url = "https://" + url;
+            }
+
+            if (!Uri.TryCreate(url, UriKind.Absolute, out _))
+            {
+                return BadRequest("Ugyldig URL.");
+            }
+
+            try
+            {
+                var result = await pingPreviewService.SendPreviewPingAsync(url, cancellationToken);
+
+                if (result == null)
                 {
-                    statusCode = m.StatusCode,
-                    dnsLookupMs = m.DnsLookupMs,
-                    connectMs = m.ConnectMs,
-                    tlsHandshakeMs = m.TlsHandshakeMs,
-                    timeToFirstByteMs = m.TimeToFirstByteMs,
-                    totalTimeMs = m.TotalTimeMs
-                })
-                .FirstOrDefaultAsync();
+                    return StatusCode(500, "Ingen respons modtaget.");
+                }
 
-            if (latestMeasurement == null)
-            {
-                return NotFound("Ingen målinger på denne website");
+                return Ok(result);
             }
-
-            return Ok(latestMeasurement);
+            catch (TaskCanceledException)
+            {
+                return StatusCode(408, "Ping preview timeout - Raspberry Pi svarede ikke i tide.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Fejl under preview ping: {ex.Message}");
+            }
         }
 
         [HttpPost]

@@ -37,51 +37,72 @@ namespace UptimeDaddy.API.Services
 
             _client.ApplicationMessageReceivedAsync += async e =>
             {
-                var payload = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
+                var topic = e.ApplicationMessage.Topic;
+                var payload = e.ApplicationMessage.ConvertPayloadToString();
 
-                Console.WriteLine($"MQTT message received: {payload}");
+                Console.WriteLine($"MQTT message received on topic '{topic}': {payload}");
 
                 try
                 {
-                    var message = JsonSerializer.Deserialize<MqttMeasurementMessageDto>(payload);
-
-                    if (message == null || message.Pages.Count == 0)
+                    if (topic == "uptime/measurements")
                     {
-                        Console.WriteLine("No pages found in MQTT payload.");
-                        return;
-                    }
+                        var message = JsonSerializer.Deserialize<MqttMeasurementMessageDto>(payload);
 
-                    using var scope = _scopeFactory.CreateScope();
-                    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-
-                    foreach (var page in message.Pages)
-                    {
-                        var websiteExists = await context.Websites
-                            .AnyAsync(w => w.Id == page.Id, stoppingToken);
-
-                        if (!websiteExists)
+                        if (message == null || message.Pages == null || message.Pages.Count == 0)
                         {
-                            Console.WriteLine($"Website {page.Id} not found. Skipping measurement.");
-                            continue;
+                            Console.WriteLine("No pages found in MQTT payload.");
+                            return;
                         }
 
-                        var measurement = new Measurement
+                        using var scope = _scopeFactory.CreateScope();
+                        var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+                        foreach (var page in message.Pages)
                         {
-                            WebsiteId = page.Id,
-                            StatusCode = int.TryParse(page.Response.Status, out var statusCode) ? statusCode : 0,
-                            DnsLookupMs = page.Response.DnsLookup,
-                            ConnectMs = page.Response.ConnectToPage,
-                            TlsHandshakeMs = page.Response.TlsHandShake,
-                            TimeToFirstByteMs = page.Response.TimeToFirstByte,
-                            TotalTimeMs = page.Response.TotalTime,
-                            CreatedAt = DateTime.UtcNow
-                        };
+                            var websiteExists = await context.Websites
+                                .AnyAsync(w => w.Id == page.Id, stoppingToken);
 
-                        context.Measurements.Add(measurement);
+                            if (!websiteExists)
+                            {
+                                Console.WriteLine($"Website {page.Id} not found. Skipping measurement.");
+                                continue;
+                            }
+
+                            var measurement = new Measurement
+                            {
+                                WebsiteId = page.Id,
+                                StatusCode = int.TryParse(page.Response.Status, out var statusCode) ? statusCode : 0,
+                                DnsLookupMs = page.Response.DnsLookup,
+                                ConnectMs = page.Response.ConnectToPage,
+                                TlsHandshakeMs = page.Response.TlsHandShake,
+                                TimeToFirstByteMs = page.Response.TimeToFirstByte,
+                                TotalTimeMs = page.Response.TotalTime,
+                                CreatedAt = DateTime.UtcNow
+                            };
+
+                            context.Measurements.Add(measurement);
+                        }
+
+                        await context.SaveChangesAsync(stoppingToken);
+                        Console.WriteLine("Measurements saved to database.");
                     }
+                    else if (topic == "uptime/ping/responses")
+                    {
+                        var response = JsonSerializer.Deserialize<MqttPingPreviewResponseDto>(payload);
 
-                    await context.SaveChangesAsync(stoppingToken);
-                    Console.WriteLine("Measurements saved to database.");
+                        if (response == null || string.IsNullOrWhiteSpace(response.RequestId))
+                        {
+                            Console.WriteLine("Invalid ping preview response payload.");
+                            return;
+                        }
+
+                        var completed = PingPreviewService.TryCompleteRequest(response);
+
+                        if (!completed)
+                        {
+                            Console.WriteLine($"No pending preview request found for RequestId: {response.RequestId}");
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -97,8 +118,9 @@ namespace UptimeDaddy.API.Services
             {
                 await _client.ConnectAsync(options, stoppingToken);
                 await _client.SubscribeAsync("uptime/measurements", cancellationToken: stoppingToken);
+                await _client.SubscribeAsync("uptime/ping/responses", cancellationToken: stoppingToken);
 
-                Console.WriteLine("MQTT connected and subscribed to uptime/measurements");
+                Console.WriteLine("MQTT connected and subscribed to uptime/measurements and uptime/ping/responses");
             }
             catch (Exception ex)
             {
