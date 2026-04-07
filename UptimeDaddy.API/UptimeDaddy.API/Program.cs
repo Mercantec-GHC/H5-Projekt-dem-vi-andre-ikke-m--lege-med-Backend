@@ -31,9 +31,9 @@ builder.Services.AddCors(options =>
     });
 });
 
-//var jwtKey = builder.Configuration["Jwt:Key"];
+var jwtKey = builder.Configuration["Jwt:Key"];
 
-/*if (string.IsNullOrWhiteSpace(jwtKey))
+if (string.IsNullOrWhiteSpace(jwtKey))
 {
     throw new Exception("Jwt:Key is missing");
 }
@@ -74,7 +74,7 @@ builder.Services
         };
     });
 
-builder.Services.AddAuthorization();*/
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
