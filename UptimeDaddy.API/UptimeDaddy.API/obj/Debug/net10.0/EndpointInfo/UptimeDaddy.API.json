@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "UptimeDaddy API",
-    "version": "v1"
+    "title": "UptimeDaddy.API",
+    "version": "1.0"
   },
   "paths": {
     "/api/Measurements": {
@@ -38,6 +38,60 @@
       "get": {
         "tags": [
           "Measurements"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Measurements/website/{websiteId}": {
+      "get": {
+        "tags": [
+          "Measurements"
+        ],
+        "parameters": [
+          {
+            "name": "websiteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "hours",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Measurements/website/{websiteId}/latest": {
+      "get": {
+        "tags": [
+          "Measurements"
+        ],
+        "parameters": [
+          {
+            "name": "websiteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -99,6 +153,52 @@
         }
       }
     },
+    "/api/Websites/user/{userId}": {
+      "get": {
+        "tags": [
+          "Websites"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Websites/user/{userId}/with-measurements": {
+      "get": {
+        "tags": [
+          "Websites"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Websites/{id}": {
       "get": {
         "tags": [
@@ -142,6 +242,60 @@
           }
         }
       }
+    },
+    "/api/Websites/{id}/status": {
+      "get": {
+        "tags": [
+          "Websites"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Websites/ping": {
+      "post": {
+        "tags": [
+          "Websites"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PingPreviewRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PingPreviewRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PingPreviewRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -175,9 +329,6 @@
             "type": "integer",
             "format": "int64"
           },
-          "website": {
-            "$ref": "#/components/schemas/Website"
-          },
           "statusCode": {
             "type": "integer",
             "format": "int32"
@@ -205,6 +356,19 @@
           "createdAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "website": {
+            "$ref": "#/components/schemas/Website"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PingPreviewRequestDto": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
