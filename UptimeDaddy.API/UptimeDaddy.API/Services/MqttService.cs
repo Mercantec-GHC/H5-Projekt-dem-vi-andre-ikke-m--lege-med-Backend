@@ -107,7 +107,7 @@ namespace UptimeDaddy.API.Services
                     {
                         var faviconMessage = JsonSerializer.Deserialize<MqttFaviconUpdateDto>(payload);
 
-                        if (faviconMessage == null || faviconMessage.WebsiteId <= 0 || string.IsNullOrWhiteSpace(faviconMessage.Icon))
+                        if (faviconMessage == null || faviconMessage.Id <= 0 || string.IsNullOrWhiteSpace(faviconMessage.Favicon))
                         {
                             Console.WriteLine("Invalid favicon payload.");
                             return;
@@ -117,28 +117,22 @@ namespace UptimeDaddy.API.Services
                         var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
                         var website = await context.Websites
-                            .FirstOrDefaultAsync(w => w.Id == faviconMessage.WebsiteId, stoppingToken);
+                            .FirstOrDefaultAsync(w => w.Id == faviconMessage.Id, stoppingToken);
 
                         if (website == null)
                         {
-                            Console.WriteLine($"Website {faviconMessage.WebsiteId} not found for favicon update.");
+                            Console.WriteLine($"Website {faviconMessage.Id} not found for favicon update.");
                             return;
                         }
 
-                        website.FaviconBase64 = faviconMessage.Icon;
+                        website.FaviconBase64 = faviconMessage.Favicon;
 
                         await context.SaveChangesAsync(stoppingToken);
 
-                        Console.WriteLine($"Favicon updated for website {faviconMessage.WebsiteId}");
+                        Console.WriteLine($"Favicon updated for website {faviconMessage.Id}");
                     }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error while processing MQTT message: {ex}");
-                }
-            };
 
-            var options = new MqttClientOptionsBuilder()
+                    var options = new MqttClientOptionsBuilder()
                 .WithTcpServer(host, port)
                 .Build();
 
