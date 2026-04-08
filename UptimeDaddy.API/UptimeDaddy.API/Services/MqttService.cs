@@ -131,8 +131,14 @@ namespace UptimeDaddy.API.Services
 
                         Console.WriteLine($"Favicon updated for website {faviconMessage.Id}");
                     }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error processing MQTT message: {ex.Message}");
+                }
+            };
 
-                    var options = new MqttClientOptionsBuilder()
+            var options = new MqttClientOptionsBuilder()
                 .WithTcpServer(host, port)
                 .Build();
 
