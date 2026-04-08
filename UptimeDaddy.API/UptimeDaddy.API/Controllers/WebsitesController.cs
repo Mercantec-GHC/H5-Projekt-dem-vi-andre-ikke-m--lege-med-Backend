@@ -168,7 +168,18 @@ namespace UptimeDaddy.API.Controllers
                     return StatusCode(500, "Ingen respons modtaget.");
                 }
 
-                return Ok(result);
+                return Ok(new
+                {
+                    type = result.Type,
+                    requestId = result.RequestId,
+                    path = result.Path,
+                    statusCode = int.TryParse(result.Status, out var statusCode) ? statusCode : 0,
+                    dnsLookupMs = result.DnsLookup,
+                    connectMs = result.ConnectToPage,
+                    tlsHandshakeMs = result.TlsHandShake,
+                    timeToFirstByteMs = result.TimeToFirstByte,
+                    totalTimeMs = result.TotalTime
+                });
             }
             catch (TaskCanceledException)
             {
