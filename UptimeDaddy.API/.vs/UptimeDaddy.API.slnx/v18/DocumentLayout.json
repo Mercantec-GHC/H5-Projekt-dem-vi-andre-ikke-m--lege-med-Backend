@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\mqttpingpreviewresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\mqttpingpreviewresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\pingpreviewrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\pingpreviewrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\services\\pingpreviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\services\\pingpreviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\services\\mqttpublishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\services\\mqttpublishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\mqttfaviconupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\mqttfaviconupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\controllers\\websitescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,40 +35,20 @@
       "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\mqttpingpreviewresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\mqttpingpreviewresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\mqttfaviconupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\mqttfaviconupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\mqttpingpreviewrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\mqttpingpreviewrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\mqttmeasurementmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\mqttmeasurementmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\mqttpingpreviewrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\mqttpingpreviewrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\pingpreviewrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\pingpreviewrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\dtos\\updatewebsiteintervaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\dtos\\updatewebsiteintervaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\models\\website.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\models\\website.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\services\\pingpreviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|solutionrelative:uptimedaddy.api\\services\\pingpreviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DF4CA87-09AE-19FC-5101-F8141FC8DAAC}|UptimeDaddy.API\\UptimeDaddy.API.csproj|c:\\users\\kevin\\repo\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\h5-projekt-dem-vi-andre-ikke-m--lege-med-backend\\uptimedaddy.api\\uptimedaddy.api\\services\\websiteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,48 +98,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MqttPingPreviewRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttPingPreviewRequestDto.cs",
-              "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\MqttPingPreviewRequestDto.cs",
-              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttPingPreviewRequestDto.cs",
-              "RelativeToolTip": "UptimeDaddy.API\\DTOs\\MqttPingPreviewRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T07:50:45.919Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MqttPingPreviewResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttPingPreviewResponseDto.cs",
-              "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\MqttPingPreviewResponseDto.cs",
-              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttPingPreviewResponseDto.cs",
-              "RelativeToolTip": "UptimeDaddy.API\\DTOs\\MqttPingPreviewResponseDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T07:48:48.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MqttMeasurementMessageDto.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttMeasurementMessageDto.cs",
-              "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\MqttMeasurementMessageDto.cs",
-              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttMeasurementMessageDto.cs",
-              "RelativeToolTip": "UptimeDaddy.API\\DTOs\\MqttMeasurementMessageDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T06:54:10.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "MqttFaviconUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttFaviconUpdateDto.cs",
               "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\MqttFaviconUpdateDto.cs",
@@ -147,11 +110,12 @@
               "RelativeToolTip": "UptimeDaddy.API\\DTOs\\MqttFaviconUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T23:36:09.396Z"
+              "WhenOpened": "2026-04-07T23:36:09.396Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "MqttService.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Services\\MqttService.cs",
               "RelativeDocumentMoniker": "UptimeDaddy.API\\Services\\MqttService.cs",
@@ -164,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "WebsitesController.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Controllers\\WebsitesController.cs",
               "RelativeDocumentMoniker": "UptimeDaddy.API\\Controllers\\WebsitesController.cs",
@@ -177,20 +141,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MqttPublishService.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Services\\MqttPublishService.cs",
               "RelativeDocumentMoniker": "UptimeDaddy.API\\Services\\MqttPublishService.cs",
               "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Services\\MqttPublishService.cs",
               "RelativeToolTip": "UptimeDaddy.API\\Services\\MqttPublishService.cs",
-              "ViewState": "AgIAALIAAAAAAAAAAAAiwLQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAiwL0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T12:37:05.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "PingPreviewService.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Services\\PingPreviewService.cs",
+              "RelativeDocumentMoniker": "UptimeDaddy.API\\Services\\PingPreviewService.cs",
+              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Services\\PingPreviewService.cs",
+              "RelativeToolTip": "UptimeDaddy.API\\Services\\PingPreviewService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:51:17.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PingPreviewRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\PingPreviewRequestDto.cs",
               "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\PingPreviewRequestDto.cs",
@@ -198,11 +175,63 @@
               "RelativeToolTip": "UptimeDaddy.API\\DTOs\\PingPreviewRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T07:41:23.323Z"
+              "WhenOpened": "2026-04-07T07:41:23.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MqttPingPreviewResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttPingPreviewResponseDto.cs",
+              "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\MqttPingPreviewResponseDto.cs",
+              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttPingPreviewResponseDto.cs",
+              "RelativeToolTip": "UptimeDaddy.API\\DTOs\\MqttPingPreviewResponseDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:48:48.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Program.cs",
+              "RelativeDocumentMoniker": "UptimeDaddy.API\\Program.cs",
+              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Program.cs",
+              "RelativeToolTip": "UptimeDaddy.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T12:23:14.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "MqttPingPreviewRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttPingPreviewRequestDto.cs",
+              "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\MqttPingPreviewRequestDto.cs",
+              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttPingPreviewRequestDto.cs",
+              "RelativeToolTip": "UptimeDaddy.API\\DTOs\\MqttPingPreviewRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:50:45.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MqttMeasurementMessageDto.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttMeasurementMessageDto.cs",
+              "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\MqttMeasurementMessageDto.cs",
+              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\MqttMeasurementMessageDto.cs",
+              "RelativeToolTip": "UptimeDaddy.API\\DTOs\\MqttMeasurementMessageDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:54:10.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "UpdateWebsiteIntervalDto.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\DTOs\\UpdateWebsiteIntervalDto.cs",
               "RelativeDocumentMoniker": "UptimeDaddy.API\\DTOs\\UpdateWebsiteIntervalDto.cs",
@@ -214,19 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Program.cs",
-              "RelativeDocumentMoniker": "UptimeDaddy.API\\Program.cs",
-              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Program.cs",
-              "RelativeToolTip": "UptimeDaddy.API\\Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAiwEgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T12:23:14.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Website.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Models\\Website.cs",
               "RelativeDocumentMoniker": "UptimeDaddy.API\\Models\\Website.cs",
@@ -235,18 +252,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-23T12:10:22.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PingPreviewService.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Services\\PingPreviewService.cs",
-              "RelativeDocumentMoniker": "UptimeDaddy.API\\Services\\PingPreviewService.cs",
-              "ToolTip": "C:\\Users\\kevin\\Repo\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\\UptimeDaddy.API\\UptimeDaddy.API\\Services\\PingPreviewService.cs",
-              "RelativeToolTip": "UptimeDaddy.API\\Services\\PingPreviewService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwDIAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T07:51:17.972Z"
             },
             {
               "$type": "Document",

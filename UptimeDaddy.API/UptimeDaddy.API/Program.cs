@@ -32,7 +32,6 @@ builder.Services.AddCors(options =>
 });
 
 var jwtKey = builder.Configuration["Jwt:Key"];
-
 if (string.IsNullOrWhiteSpace(jwtKey))
 {
     throw new Exception("Jwt:Key is missing");

@@ -194,48 +194,53 @@ namespace UptimeDaddy.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateWebsiteDto dto)
         {
-            var accountExists = await _context.Users.AnyAsync(u => u.Id == dto.UserId);
-
-            if (!accountExists)
+            try
             {
-                return BadRequest("Account findes ikke.");
+                if (dto == null)
+                    return BadRequest("Body mangler.");
+
+                if (string.IsNullOrWhiteSpace(dto.Url))
+                    return BadRequest("URL er påkrævet.");
+
+                var accountExists = await _context.Users.AnyAsync(u => u.Id == dto.UserId);
+                if (!accountExists)
+                    return BadRequest("Account findes ikke.");
+
+                var normalizedUrl = dto.Url.Trim().ToLower();
+
+                var websiteAlreadyExists = await _context.Websites
+                    .AnyAsync(w => w.UserId == dto.UserId && w.Url.ToLower() == normalizedUrl);
+
+                if (websiteAlreadyExists)
+                    return BadRequest("Du har allerede tilføjet dette website.");
+
+                var website = new Website
+                {
+                    Url = dto.Url.Trim(),
+                    IntervalTime = dto.IntervalTime,
+                    UserId = dto.UserId
+                };
+
+                _context.Websites.Add(website);
+                await _context.SaveChangesAsync();
+
+                await _mqttPublishService.PublishWebsiteCreatedAsync(
+                    website.UserId, website.Id, website.Url, website.IntervalTime
+                );
+
+                return Ok(new
+                {
+                    id = website.Id,
+                    url = website.Url,
+                    intervalTime = website.IntervalTime,
+                    userId = website.UserId,
+                    faviconBase64 = website.FaviconBase64
+                });
             }
-
-            var normalizedUrl = dto.Url.Trim().ToLower();
-
-            var websiteAlreadyExists = await _context.Websites
-                .AnyAsync(w => w.UserId == dto.UserId && w.Url.ToLower() == normalizedUrl);
-
-            if (websiteAlreadyExists)
+            catch (Exception ex)
             {
-                return BadRequest("Du har allerede tilføjet dette website.");
+                return StatusCode(500, ex.ToString());
             }
-
-            var website = new Website
-            {
-                Url = dto.Url.Trim(),
-                IntervalTime = dto.IntervalTime,
-                UserId = dto.UserId
-            };
-
-            _context.Websites.Add(website);
-            await _context.SaveChangesAsync();
-
-            await _mqttPublishService.PublishWebsiteCreatedAsync(
-                website.UserId,
-                website.Id,
-                website.Url,
-                website.IntervalTime
-            );
-
-            return Ok(new
-            {
-                id = website.Id,
-                url = website.Url,
-                intervalTime = website.IntervalTime,
-                userId = website.UserId,
-                faviconBase64 = website.FaviconBase64
-            });
         }
 
         [HttpDelete("{id:long}")]
