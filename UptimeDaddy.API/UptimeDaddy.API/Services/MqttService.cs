@@ -107,7 +107,16 @@ namespace UptimeDaddy.API.Services
                     {
                         var faviconMessage = JsonSerializer.Deserialize<MqttFaviconUpdateDto>(payload);
 
-                        if (faviconMessage == null || faviconMessage.Id <= 0 || string.IsNullOrWhiteSpace(faviconMessage.Favicon))
+                        if (faviconMessage == null)
+                        {
+                            Console.WriteLine("Favicon payload kunne ikke deserialize.");
+                            return;
+                        }
+
+                        Console.WriteLine($"Favicon message: Id={faviconMessage.Id}, UserId={faviconMessage.UserId}, Path={faviconMessage.Path}");
+                        Console.WriteLine($"Favicon længde: {faviconMessage.Favicon?.Length ?? 0}");
+
+                        if (faviconMessage.Id <= 0 || string.IsNullOrWhiteSpace(faviconMessage.Favicon))
                         {
                             Console.WriteLine("Invalid favicon payload.");
                             return;
@@ -117,19 +126,22 @@ namespace UptimeDaddy.API.Services
                         var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
                         var website = await context.Websites
-                            .FirstOrDefaultAsync(w => w.Id == faviconMessage.Id, stoppingToken);
+                            .FirstOrDefaultAsync(w => w.Id == faviconMessage.Id && w.UserId == faviconMessage.UserId, stoppingToken);
 
                         if (website == null)
                         {
-                            Console.WriteLine($"Website {faviconMessage.Id} not found for favicon update.");
+                            Console.WriteLine($"Website ikke fundet. Id={faviconMessage.Id}, UserId={faviconMessage.UserId}");
                             return;
                         }
 
+                        Console.WriteLine($"Website fundet. Eksisterende favicon længde: {website.FaviconBase64?.Length ?? 0}");
+
                         website.FaviconBase64 = faviconMessage.Favicon;
+                        context.Entry(website).Property(w => w.FaviconBase64).IsModified = true;
 
-                        await context.SaveChangesAsync(stoppingToken);
+                        var rows = await context.SaveChangesAsync(stoppingToken);
 
-                        Console.WriteLine($"Favicon updated for website {faviconMessage.Id}");
+                        Console.WriteLine($"Favicon updated for website {faviconMessage.Id}. Rows affected: {rows}");
                     }
                 }
                 catch (Exception ex)

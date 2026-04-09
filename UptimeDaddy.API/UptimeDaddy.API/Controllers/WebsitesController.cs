@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using UptimeDaddy.API.Data;
 using UptimeDaddy.API.DTOs;
 using UptimeDaddy.API.Models;
@@ -202,30 +203,54 @@ namespace UptimeDaddy.API.Controllers
                 if (string.IsNullOrWhiteSpace(dto.Url))
                     return BadRequest("URL er påkrævet.");
 
-                var accountExists = await _context.Users.AnyAsync(u => u.Id == dto.UserId);
+                if (dto.IntervalTime <= 0)
+                    return BadRequest("IntervalTime skal være større end 0.");
+
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+                if (string.IsNullOrWhiteSpace(userIdClaim))
+                    return Unauthorized("Kunne ikke finde bruger-id i token.");
+
+                if (!long.TryParse(userIdClaim, out var userId))
+                    return Unauthorized("Ugyldigt bruger-id i token.");
+
+                var accountExists = await _context.Users.AnyAsync(u => u.Id == userId);
                 if (!accountExists)
                     return BadRequest("Account findes ikke.");
 
-                var normalizedUrl = dto.Url.Trim().ToLower();
+                var url = dto.Url.Trim();
+
+                if (!url.StartsWith("http://") && !url.StartsWith("https://"))
+                {
+                    url = "https://" + url;
+                }
+
+                if (!Uri.TryCreate(url, UriKind.Absolute, out _))
+                    return BadRequest("Ugyldig URL.");
+
+                var normalizedUrl = url.ToLower();
 
                 var websiteAlreadyExists = await _context.Websites
-                    .AnyAsync(w => w.UserId == dto.UserId && w.Url.ToLower() == normalizedUrl);
+                    .AnyAsync(w => w.UserId == userId && w.Url.ToLower() == normalizedUrl);
 
                 if (websiteAlreadyExists)
                     return BadRequest("Du har allerede tilføjet dette website.");
 
                 var website = new Website
                 {
-                    Url = dto.Url.Trim(),
+                    Url = url,
                     IntervalTime = dto.IntervalTime,
-                    UserId = dto.UserId
+                    UserId = userId
                 };
 
                 _context.Websites.Add(website);
                 await _context.SaveChangesAsync();
 
                 await _mqttPublishService.PublishWebsiteCreatedAsync(
-                    website.UserId, website.Id, website.Url, website.IntervalTime
+                    website.UserId,
+                    website.Id,
+                    website.Url,
+                    website.IntervalTime
                 );
 
                 return Ok(new
@@ -239,7 +264,11 @@ namespace UptimeDaddy.API.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.ToString());
+                return StatusCode(500, new
+                {
+                    message = "Der opstod en fejl under oprettelse af website.",
+                    error = ex.Message
+                });
             }
         }
 
