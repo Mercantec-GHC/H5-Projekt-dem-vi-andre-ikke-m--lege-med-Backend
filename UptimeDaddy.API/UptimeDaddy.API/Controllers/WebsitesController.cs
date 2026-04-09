@@ -217,12 +217,10 @@ namespace UptimeDaddy.API.Controllers
 
                 var url = dto.Url.Trim();
 
-                if (!url.StartsWith("http://") && !url.StartsWith("https://"))
-                {
-                    url = "https://" + url;
-                }
+                if (string.IsNullOrWhiteSpace(url))
+                    return BadRequest("URL er påkrævet.");
 
-                if (!Uri.TryCreate(url, UriKind.Absolute, out _))
+                if (!url.Contains("."))
                     return BadRequest("Ugyldig URL.");
 
                 var normalizedUrl = url.ToLower();
