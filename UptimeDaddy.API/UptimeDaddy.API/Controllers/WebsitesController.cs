@@ -203,9 +203,6 @@ namespace UptimeDaddy.API.Controllers
                 if (string.IsNullOrWhiteSpace(dto.Url))
                     return BadRequest("URL er påkrævet.");
 
-                if (dto.IntervalTime <= 0)
-                    return BadRequest("IntervalTime skal være større end 0.");
-
                 var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
                 if (string.IsNullOrWhiteSpace(userIdClaim))
@@ -236,10 +233,12 @@ namespace UptimeDaddy.API.Controllers
                 if (websiteAlreadyExists)
                     return BadRequest("Du har allerede tilføjet dette website.");
 
+                var intervalTime = dto.IntervalTime > 0 ? dto.IntervalTime : 60;
+
                 var website = new Website
                 {
                     Url = url,
-                    IntervalTime = dto.IntervalTime,
+                    IntervalTime = intervalTime,
                     UserId = userId
                 };
 
