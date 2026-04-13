@@ -15,9 +15,9 @@ namespace UptimeDaddy.API.Controllers
     public class WebsitesController : ControllerBase
     {
         private readonly AppDbContext _context;
-        private readonly MqttPublishService _mqttPublishService;
+        private readonly IMqttPublishService _mqttPublishService;
 
-        public WebsitesController(AppDbContext context, MqttPublishService mqttPublishService)
+        public WebsitesController(AppDbContext context, IMqttPublishService mqttPublishService)
         {
             _context = context;
             _mqttPublishService = mqttPublishService;

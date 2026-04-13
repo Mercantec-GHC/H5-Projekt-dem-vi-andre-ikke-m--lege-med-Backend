@@ -1,10 +1,13 @@
 ﻿using System.Text;
 using System.Text.Json;
 using MQTTnet;
+using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
+using UptimeDaddy.API.Services;
 
 namespace UptimeDaddy.API.Services
 {
-    public class MqttPublishService
+    public class MqttPublishService : IMqttPublishService
     {
         private readonly IConfiguration _configuration;
 
