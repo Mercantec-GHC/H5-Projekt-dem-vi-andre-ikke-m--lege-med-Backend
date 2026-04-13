@@ -5,4 +5,4 @@ scrape_configs:
   - job_name: 'uptimedaddy_api'
     metrics_path: /metrics
     static_configs:
-      - targets: ['10.133.51.121:5031']
+      - targets: ['10.133.51.121:8080']
