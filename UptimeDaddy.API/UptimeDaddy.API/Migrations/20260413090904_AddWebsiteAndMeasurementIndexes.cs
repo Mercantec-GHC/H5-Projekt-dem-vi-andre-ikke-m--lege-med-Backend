@@ -14,20 +14,21 @@ namespace UptimeDaddy.API.Migrations
                 column: "user_id");
 
             migrationBuilder.CreateIndex(
-                name: "ix_measurements_website_id_created_at",
+                name: "ix_measurements_website_id_created_at_desc",
                 table: "measurements",
-                columns: new[] { "website_id", "created_at" });
+                columns: new[] { "website_id", "created_at" },
+                descending: new[] { false, true });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropIndex(
-                name: "ix_websites_user_id",
-                table: "websites");
+                name: "ix_measurements_website_id_created_at_desc",
+                table: "measurements");
 
             migrationBuilder.DropIndex(
-                name: "ix_measurements_website_id_created_at",
-                table: "measurements");
+                name: "ix_websites_user_id",
+                table: "websites");
         }
     }
 }

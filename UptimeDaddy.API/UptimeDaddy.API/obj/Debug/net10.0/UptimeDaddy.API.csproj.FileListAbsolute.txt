@@ -289,10 +289,11 @@ C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\UptimeDa.9F8F0730.Up2Date
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\UptimeDaddy.API.dll
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\refint\UptimeDaddy.API.dll
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\UptimeDaddy.API.pdb
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\UptimeDaddy.API.genruntimeconfig.cache
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\obj\Debug\net10.0\ref\UptimeDaddy.API.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\DotNetEnv.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\Sprache.dll
