@@ -383,3 +383,16 @@ C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\HealthChecks.UI.Client.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\HealthChecks.UI.Core.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\HealthChecks.UI.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\HealthChecks.UI.Data.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\Fractions.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\IdentityModel.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\IdentityModel.OidcClient.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\KubernetesClient.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\Prometheus.NetStandard.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\Prometheus.AspNetCore.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\Prometheus.AspNetCore.HealthChecks.dll
+C:\Users\kevin\Repo\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\H5-Projekt-dem-vi-andre-ikke-m--lege-med-Backend\UptimeDaddy.API\UptimeDaddy.API\bin\Debug\net10.0\YamlDotNet.dll
