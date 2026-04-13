@@ -63,7 +63,6 @@ namespace UptimeDaddy.API.Controllers
         {
             var websites = await _context.Websites
                 .Where(w => w.UserId == userId)
-                .Include(w => w.Measurements)
                 .Select(w => new
                 {
                     id = w.Id,

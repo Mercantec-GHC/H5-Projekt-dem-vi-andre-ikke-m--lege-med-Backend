@@ -26,6 +26,15 @@ namespace UptimeDaddy.API.Data
                 .HasMany(w => w.Measurements)
                 .WithOne(m => m.Website)
                 .HasForeignKey(m => m.WebsiteId);
+
+            modelBuilder.Entity<Website>()
+                .HasIndex(w => w.UserId)
+                .HasDatabaseName("ix_websites_user_id");
+
+            modelBuilder.Entity<Measurement>()
+                .HasIndex(m => new { m.WebsiteId, m.CreatedAt })
+                .IsDescending(false, true)
+                .HasDatabaseName("ix_measurements_website_id_created_at_desc");
         }
     }
 }
