@@ -5,12 +5,12 @@ namespace UptimeDaddy.API.Services
 {
     public class PingPreviewService
     {
-        private readonly MqttPublishService _mqttPublishService;
+        private readonly IMqttPublishService _mqttPublishService;
 
         private static readonly ConcurrentDictionary<string, TaskCompletionSource<MqttPingPreviewResponseDto>> _pendingRequests
             = new();
 
-        public PingPreviewService(MqttPublishService mqttPublishService)
+        public PingPreviewService(IMqttPublishService mqttPublishService)
         {
             _mqttPublishService = mqttPublishService;
         }
